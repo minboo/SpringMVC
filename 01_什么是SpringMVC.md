@@ -18,15 +18,14 @@
 
 **最典型的MVC就是JSP + servlet + javabean的模式。**
 
-
-图片
+![image](https://user-images.githubusercontent.com/69302396/141135056-c6af4fcd-b910-4ec3-bb03-0540bc54ed53.png)
 
 ## 1.2、Model1时代
 在web早期的开发中，通常采用的都是Model1。
 
 Model1中，主要分为两层，视图层和模型层。
 
-图片
+![image](https://user-images.githubusercontent.com/69302396/141135300-2e005d8e-0cfe-409c-8415-5ef2941d6d79.png)
 
 Model1优点：架构简单，比较适合小型项目开发；
 
@@ -35,7 +34,7 @@ Model1缺点：JSP职责不单一，职责过重，不便于维护；
 ## 1.3、Model2时代
 Model2把一个项目分成三部分，包括视图、控制、模型。
 
-图片
+![image](https://user-images.githubusercontent.com/69302396/141135686-9269f71f-121a-41e4-9d80-bde8b8775ef1.png)
 
 1.用户发请求
 
