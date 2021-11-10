@@ -249,7 +249,9 @@ SpringMVC的原理如下图所示：
 
 
 ## 2.3、SpringMVC执行原理
+
 ![image](https://user-images.githubusercontent.com/69302396/141146014-48743e82-4340-4734-a64a-9e5c61dc7083.png)
+
 图为SpringMVC的一个较完整的流程图，实线表示SpringMVC框架提供的技术，不需要开发者实现，虚线表示需要开发者实现。
 
 **简要分析执行流程**
