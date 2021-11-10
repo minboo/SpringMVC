@@ -233,9 +233,10 @@ DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.
 
 
 ## 2.2、中心控制器
-	Spring的web框架围绕DispatcherServlet设计。DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.5开始，使用Java 5或者以上版本的用户可以采用基于注解的controller声明方式。
 
-	Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一个中心Servlet分派请求及提供其他功能，DispatcherServlet是一个实际的Servlet (它继承自HttpServlet 基类)。**
+Spring的web框架围绕DispatcherServlet设计。DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.5开始，使用Java 5或者以上版本的用户可以采用基于注解的controller声明方式。
+
+Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一个中心Servlet分派请求及提供其他功能，DispatcherServlet是一个实际的Servlet (它继承自HttpServlet 基类)。**
 
 图片
 
@@ -252,7 +253,7 @@ SpringMVC的原理如下图所示：
 
 **简要分析执行流程**
 
-1.DispatcherServlet表示前置控制器，是整个SpringMVC的控制中心。用户发出请求，DispatcherServlet接收请求并拦截请求。
+1. DispatcherServlet表示前置控制器，是整个SpringMVC的控制中心。用户发出请求，DispatcherServlet接收请求并拦截请求。
 
 我们假设请求的url为 : http://localhost:8080/SpringMVC/hello
 
@@ -267,24 +268,24 @@ hello表示控制器
 
 通过分析，如上url表示为：请求位于服务器localhost:8080上的SpringMVC站点的hello控制器。
 
-2.HandlerMapping为处理器映射。DispatcherServlet调用HandlerMapping,HandlerMapping根据请求url查找Handler。
+2. HandlerMapping为处理器映射。DispatcherServlet调用HandlerMapping,HandlerMapping根据请求url查找Handler。
 
-3.HandlerExecution表示具体的Handler,其主要作用是根据url查找控制器，如上url被查找控制器为：hello。
+3. HandlerExecution表示具体的Handler,其主要作用是根据url查找控制器，如上url被查找控制器为：hello。
 
-4.HandlerExecution将解析后的信息传递给DispatcherServlet,如解析控制器映射等。
+4. HandlerExecution将解析后的信息传递给DispatcherServlet,如解析控制器映射等。
 
-5.HandlerAdapter表示处理器适配器，其按照特定的规则去执行Handler。
+5. HandlerAdapter表示处理器适配器，其按照特定的规则去执行Handler。
 
-6.Handler让具体的Controller执行。
+6. Handler让具体的Controller执行。
 
-7.Controller将具体的执行信息返回给HandlerAdapter,如ModelAndView。
+7. Controller将具体的执行信息返回给HandlerAdapter,如ModelAndView。
 
-8.HandlerAdapter将视图逻辑名或模型传递给DispatcherServlet。
+8. HandlerAdapter将视图逻辑名或模型传递给DispatcherServlet。
 
-9.DispatcherServlet调用视图解析器(ViewResolver)来解析HandlerAdapter传递的逻辑视图名。
+9. DispatcherServlet调用视图解析器(ViewResolver)来解析HandlerAdapter传递的逻辑视图名。
 
-10.视图解析器将解析的逻辑视图名传给DispatcherServlet。
+10. 视图解析器将解析的逻辑视图名传给DispatcherServlet。
 
-11.DispatcherServlet根据视图解析器解析的视图结果，调用具体的视图。
+11. DispatcherServlet根据视图解析器解析的视图结果，调用具体的视图。
 
-12.最终视图呈现给用户。
+12. 最终视图呈现给用户。
