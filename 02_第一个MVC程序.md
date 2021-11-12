@@ -47,7 +47,7 @@
 </beans>
 ```
 ### 5、添加 处理映射器
-``xml
+```xml
 <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
 ```
 ### 6、添加 处理器适配器
@@ -96,7 +96,7 @@ public class HelloController implements Controller {
 <!--Handler-->
 <bean id="/hello" class="com.kuang.controller.HelloController"/>
 ```
-10、写要跳转的jsp页面，显示ModelandView存放的数据，以及我们的正常页面；
+### 10、写要跳转的jsp页面，显示ModelandView存放的数据，以及我们的正常页面；
 ```jsp
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -275,13 +275,13 @@ public class HelloController {
   }
 }
 ```
-@Controller是为了让Spring IOC容器初始化时自动扫描到；
+- @Controller是为了让Spring IOC容器初始化时自动扫描到；
 
-@RequestMapping是为了映射请求路径，这里因为类与方法上都有映射所以访问时应该是/HelloController/hello；
+- @RequestMapping是为了映射请求路径，这里因为类与方法上都有映射所以访问时应该是/HelloController/hello；
 
-方法中声明Model类型的参数是为了把Action中的数据带到视图中；
+- 方法中声明Model类型的参数是为了把Action中的数据带到视图中；
 
-方法返回的结果是视图的名称hello，加上配置文件中的前后缀变成WEB-INF/jsp/hello.jsp。
+- 方法返回的结果是视图的名称hello，加上配置文件中的前后缀变成WEB-INF/jsp/hello.jsp。
 
 ### 7、创建视图层
 
